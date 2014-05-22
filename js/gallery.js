@@ -1,5 +1,5 @@
 var photoListElement = document.querySelector("#photos");
-
+//photoListの最後に画像を追加（修正）
 var photoList = [
     {src: "img/200705.png", title: "7月"},
     {src: "img/200806.png", title: "8月"},
@@ -23,7 +23,8 @@ var renderPhoto = function(index){
     elm.setAttribute("title", photo.title);
     return elm;
 };
-
+//photoList.lengthが追加した画像により１足されるので、修正前よりもwhile文での処理が一回増え
+//付かした画像がsrc:   "img/side.png", title: "横"の後に追加される
 var showPhotos = function(){
     if(isReady()){
         var index = 0;
