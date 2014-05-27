@@ -25,7 +25,7 @@ var calcMean = function(){
     var index = 0;
     var sum = 0;
     var n = 0;
-
+               
     while(index < inputElements.length){
         var input = inputElements[index];
         var number = Number(input.value);
@@ -35,10 +35,10 @@ var calcMean = function(){
         }
         index = index + 1;
     }
-
+   
     if(n > 0){
         outputMean.textContent = sum / n;
-    }
+    }else{alert("数字を入力してください")}
 };
 
 var calcStats = function(){
