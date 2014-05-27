@@ -39,6 +39,21 @@ var calcMean = function(){
     if(n > 0){
         outputMean.textContent = sum / n;
     }else{alert("数字を入力してください")}
+　　　　
+    var n2 = 1;
+    var n3 = n2 + 1;
+    
+    while(n2 < 8){
+        var max =  document.querySelector("#number_" + (n2));
+        var numberB =  document.querySelector("#number_" + (n3));
+        if(max < numberB){
+           max = document.querySelector("#number_" + (n3));
+        }
+        n2 = n2 + 1;
+        n3 = n3 + 1;
+    }
+　　　　outputMax.textContent = max;
+
 };
 
 var calcStats = function(){
@@ -49,9 +64,11 @@ var initApp = function(){
     initInputElements();
 
     outputMean = document.querySelector("#mean");
-
+    outputMax = document.querySelector("#max");
     var calcMeanButton = document.querySelector("#start");
     calcMeanButton.addEventListener("click", calcStats);
+   
+
 };
 
 initApp();
